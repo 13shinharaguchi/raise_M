@@ -35,10 +35,14 @@ class User_registerController extends Controller
      */
     public function store(Request $request)
     {
+        //$requestで入力されたデータを受け取り、なにかしらの変数にいれる
+        //$requesここではallにしているが、ここで受取かたはいじることができる
          $data = $request->all();
         //  dd($data);
         $result = game_user::create($data);
-        return response()->view('user_register.create');
+        //次の動きをしていする
+        //ここでは、次のやってみたいことを登録するに遷移
+        return response()->view('wanna_try.create');
          
     }
 
