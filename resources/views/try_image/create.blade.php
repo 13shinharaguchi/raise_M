@@ -7,11 +7,25 @@
     <title>raise</title>
 </head>
 <body>
-    <div>
-    ここにやってみたいことのイメージ、妄想を記入していく
-    </div>
-    <x-primary-button class="ml-3">
-        {{ __('登録') }}
-    </x-primary-button>
+    <h1>ここにイメージや妄想を記入していく</h1>
+    <div>ここにはユーザー名も表示する</div>
+     <form action="{{ route('image.store') }}" method="POST">
+        @csrf
+        <div>
+            <x-input-label for="tweet" :value="__('1つ目の質問')" />
+            <input name='name' class="form-control"></input>
+        </div>
+        <div>
+            <x-input-label for="tweet" :value="__('2つ目の質問')" />
+            <input name='name' class="form-control"></input>
+        </div>
+        <div>
+            <x-input-label for="tweet" :value="__('3つ目の質問')" />
+            <input name='name' class="form-control"></input>
+        </div>
+        <x-primary-button class="ml-3">
+            {{ __('相手に同じ質問をさせるに移動') }}
+        </x-primary-button>
+    </form>
 </body>
 </html>

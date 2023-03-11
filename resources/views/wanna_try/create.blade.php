@@ -7,9 +7,14 @@
     <title>wanna_try</title>
 </head>
 <body>
-    <div>やってみたいことを登録する</div>
+    <h1>大元やってみたいことを登録する</h1>
     <p>ここは登録する必要がないと思うからセッションかなんかにする</p>
     <p>入力フォームの設置をする</p>
+    <form action="{{ route('wanna_try.store') }}" method="POST">
+    @csrf
+        <div class="form-group">
+            <input name='wanna_try' class="form-control"></input>
+        </div>
     <x-primary-button class="ml-3">
         {{ __('やってみたいことのイメージ・妄想に移動する') }}
     </x-primary-button>
