@@ -7,7 +7,9 @@
                 <div class="form-group">
                      <input name='name' class="form-control"></input>
                 </div>
-                <button type='submit' class="btn btn-primary btn-lg">保存</button>
+                <x-primary-button class="ml-3">
+                 {{ __('登録') }}
+                 </x-primary-button>
             </form>
         </div>
     </div>
