@@ -8,13 +8,10 @@
 </head>
 <body>
     <div>
-        <h1>最初の画面</h1>
-        <form action="{{ route('user_register.create') }}" method="GET">
-        <x-primary-button class="ml-3">
-          {{ __('ユーザ名登録に進む') }}
-        </x-primary-button>
-        </form>
+    ここにやってみたいことのイメージ、妄想を記入していく
     </div>
-    
+    <x-primary-button class="ml-3">
+        {{ __('登録') }}
+    </x-primary-button>
 </body>
 </html>
