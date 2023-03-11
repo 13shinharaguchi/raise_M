@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class Wanna_tryController extends Controller
 {
     public function create (){
-         return response()->view('try_image.create');
+         return response()->view('wanna_try.create');
     }
 }

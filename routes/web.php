@@ -14,8 +14,10 @@ use App\Http\Controllers\Wanna_tryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('user_register', User_registerController::class);
+Route::resource('/user_register', User_registerController::class);
 
+// ルートの書き方に関してはもう一度見直す必要がある
+Route::get('/wanna_try', [Wanna_tryController::class,'create'])->name('wanna_try.create');
 
 Route::get('/', function () {
     return view('welcome');

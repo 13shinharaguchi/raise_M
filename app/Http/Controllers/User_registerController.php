@@ -42,7 +42,8 @@ class User_registerController extends Controller
         $result = game_user::create($data);
         //次の動きをしていする
         //ここでは、次のやってみたいことを登録するに遷移
-        return response()->view('wanna_try.create');
+        return redirect()->route('wanna_try.create');
+        // return view('wanna_try.create');
          
     }
 
