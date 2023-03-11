@@ -39,6 +39,7 @@ class User_registerController extends Controller
         //$requesここではallにしているが、ここで受取かたはいじることができる
          $data = $request->all();
         //  dd($data);
+        //ここでgame_userDBに保存する、SQLをよしなに書いてくれるものcreateで新規作成をしてくれる
         $result = game_user::create($data);
         //次の動きをしていする
         //ここでは、次のやってみたいことを登録するに遷移

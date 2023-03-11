@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User_registerController;
 use App\Http\Controllers\Wanna_tryController;
+use App\Http\Controllers\Try_imageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,11 @@ Route::resource('/user_register', User_registerController::class);
 
 // ルートの書き方に関してはもう一度見直す必要がある
 Route::get('/wanna_try', [Wanna_tryController::class,'create'])->name('wanna_try.create');
+Route::post('/wanna_try/store', [Wanna_tryController::class,'store'])->name('wanna_try.store');
+
+Route::get('/try_image', [Try_imageController::class, 'create'])->name('image.create');
+Route::post('/try_image/store', [Try_imageController::class, 'store'])->name('image.store');
+Route::get('/try_image/sub_create', [Try_imageController::class, 'sub_create'])->name('image.sub_create');
 
 Route::get('/', function () {
     return view('welcome');
