@@ -13,7 +13,7 @@
     <form action="{{ route('wanna_try.store') }}" method="POST">
     @csrf
         <div class="form-group">
-            <input name='wanna_try' class="form-control"></input>
+            <x-text-input name='wanna_try' class="form-control" required autofocus />
         </div>
     <x-primary-button class="ml-3">
         {{ __('やってみたいことのイメージ・妄想に移動する') }}

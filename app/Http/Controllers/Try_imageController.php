@@ -25,5 +25,10 @@ class Try_imageController extends Controller
          return response()->view('try_image.sub_create');
                 
         }
+        
+        public function sub_store()
+        {
+           return response()->view('welcome');
+        }
     
 }

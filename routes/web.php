@@ -24,6 +24,7 @@ Route::post('/wanna_try/store', [Wanna_tryController::class,'store'])->name('wan
 Route::get('/try_image', [Try_imageController::class, 'create'])->name('image.create');
 Route::post('/try_image/store', [Try_imageController::class, 'store'])->name('image.store');
 Route::get('/try_image/sub_create', [Try_imageController::class, 'sub_create'])->name('image.sub_create');
+Route::post('/try_image/sub_store', [Try_imageController::class, 'sub_store'])->name('image.sub_store');
 
 Route::get('/', function () {
     return view('welcome');

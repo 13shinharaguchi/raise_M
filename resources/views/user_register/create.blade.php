@@ -7,7 +7,7 @@
             <form action="{{ route('user_register.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                     <input name='name' class="form-control"></input>
+                     <x-text-input name='name' class="form-control" required autofocus />
                 </div>
                 <x-primary-button class="ml-3">
                  {{ __('やってみたいことの登録に進む') }}
