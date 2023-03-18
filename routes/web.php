@@ -17,6 +17,8 @@ use App\Http\Controllers\Partner_try_imageController;
 |
 */
 Route::resource('/user_register', User_registerController::class);
+Route::get('/partner_register', [User_registerController::class,'partner_register'])->name('partner_register');
+Route::post('/partner_register/store', [User_registerController::class,'partner_register_store'])->name('partner_register_store');
 
 // ルートの書き方に関してはもう一度見直す必要がある
 Route::get('/wanna_try', [Wanna_tryController::class,'create'])->name('wanna_try.create');

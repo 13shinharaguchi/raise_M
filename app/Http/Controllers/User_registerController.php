@@ -92,4 +92,16 @@ class User_registerController extends Controller
     {
         //
     }
+    
+    public function partner_register ()
+    {
+        return response()->view('user_register.partner_create');
+    }
+    
+    public function partner_register_store (Request $request)
+    {
+        $data = $request->all();
+        $result = game_user::create($data);
+        return redirect()->route('partner_image.create');
+    }
 }
