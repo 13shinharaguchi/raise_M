@@ -50,7 +50,8 @@ class Try_imageController extends Controller
         {
         $data = $request->all();
         $result = Try_image::create($data);
-         return response()->view('welcome');
+        //  return response()->view('welcome');
+         return redirect()->route('partner_image.create');
           
         }
     
