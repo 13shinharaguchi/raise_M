@@ -10,7 +10,8 @@ class Try_imageController extends Controller
         public function create ()
         {
             //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
-         return response()->view('try_image.create');
+        $granularity_id = 1;
+         return response()->view('try_image.create',['granularity' => $granularity_id]);
                 
         }
         
@@ -19,14 +20,15 @@ class Try_imageController extends Controller
         $data = $request->all();
         // dd($data);
         $result = Try_image::create($data);
+        
          return redirect()->route('image.sub_create');
          
         }
         
         public function sub_create ()
         {
-            //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
-         return response()->view('try_image.create_g2');
+        $granularity_id = 2;
+         return response()->view('try_image.create_g2',['granularity' => $granularity_id]);
                 
         }
         
@@ -42,7 +44,8 @@ class Try_imageController extends Controller
         public function subg3_create ()
         {
             //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
-         return response()->view('try_image.create_g3');
+        $granularity_id = 3;
+         return response()->view('try_image.create_g3',['granularity' => $granularity_id]);
                 
         }
         

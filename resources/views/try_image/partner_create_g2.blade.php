@@ -14,6 +14,9 @@
         <div>
             <x-input-label for="image" :value="__('2つ目の質問')" />
             <input name='image' class="form-control"></input>
+            <div style="display:none;">
+            <input name='granularity_id' class="hidden" value="{{ $granularity }}"></input>
+            </div>
         </div>
         <x-primary-button class="ml-3">
             {{ __('3つ目の質問に移動') }}
