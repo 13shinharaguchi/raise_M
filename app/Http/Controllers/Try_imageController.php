@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Try_image;
 
 class Try_imageController extends Controller
 {
@@ -12,18 +13,45 @@ class Try_imageController extends Controller
          return response()->view('try_image.create');
                 
         }
-    
+        
         public function store(Request $request)
-    {
-
+        {
+        $data = $request->all();
+        // dd($data);
+        $result = Try_image::create($data);
          return redirect()->route('image.sub_create');
-    }
-    
+         
+        }
+        
         public function sub_create ()
         {
             //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
-         return response()->view('try_image.sub_create');
+         return response()->view('try_image.create_g2');
                 
+        }
+        
+        public function sub_store(Request $request)
+        {
+        $data = $request->all();
+        $result = Try_image::create($data);
+        //   return response()->view('try_image.create_g3');
+           return redirect()->route('image.subg3_create');
+          
+        }
+        
+        public function subg3_create ()
+        {
+            //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
+         return response()->view('try_image.create_g3');
+                
+        }
+        
+        public function subg3_store(Request $request)
+        {
+        $data = $request->all();
+        $result = Try_image::create($data);
+         return response()->view('welcome');
+          
         }
     
 }
