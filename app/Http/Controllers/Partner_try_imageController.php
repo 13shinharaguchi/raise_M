@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Try_image;
+use App\Models\game_user;
 
 class Partner_try_imageController extends Controller
 {
     public function partner_create ()
     {
         $granularity_id = 1;
-        return response()->view('try_image.partner_create',['granularity' => $granularity_id]);
+        $user = game_user::orderBy('created_at', 'desc')->first();
+        return response()->view('try_image.partner_create',['granularity' => $granularity_id , 'user' => $user]);
     }
     
     public function partner_store (Request $request)
