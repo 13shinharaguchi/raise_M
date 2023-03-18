@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>パートナーサイド</h1>
-    <div>ここにはユーザー名も表示する</div>
+    <div>{{ $user->name }}</div>
     <form action="{{ route('partner_image.store') }}" method="POST">
         @csrf
         <div>

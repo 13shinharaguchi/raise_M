@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>ここにイメージや妄想を記入していく</h1>
-    <div>ここにはユーザー名も表示する</div>
+    <div>{{ $user->name }}</div>
      <form action="{{ route('image.store') }}" method="POST">
         @csrf
         <div>
