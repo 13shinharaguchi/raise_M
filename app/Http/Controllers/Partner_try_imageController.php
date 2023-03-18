@@ -15,6 +15,9 @@ class Partner_try_imageController extends Controller
     
     public function partner_store (Request $request)
     {
+        $data = $request->all();
+        // dd($data);
+        $result = Try_image::create($data);
         return redirect()->route('partner_image.sub_create');
     }
     
@@ -26,6 +29,9 @@ class Partner_try_imageController extends Controller
     
     public function  partner_sub_store (Request $request)
     {
+        $data = $request->all();
+        // dd($data);
+        $result = Try_image::create($data);
         return redirect()->route('partner_image.subg3_create');
     }
     
@@ -37,6 +43,9 @@ class Partner_try_imageController extends Controller
     
     public function  partner_subg3_store (Request $request)
     {
+        $data = $request->all();
+        // dd($data);
+        $result = Try_image::create($data);
         // return redirect()->route('partner_image.subg3_create');
          return response()->view('welcome');
     }
