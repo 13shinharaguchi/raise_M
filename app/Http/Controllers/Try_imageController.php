@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Try_image;
 
 class Try_imageController extends Controller
 {
@@ -15,7 +16,9 @@ class Try_imageController extends Controller
         
         public function store(Request $request)
         {
-
+        $data = $request->all();
+        // dd($data);
+        $result = Try_image::create($data);
          return redirect()->route('image.sub_create');
          
         }
@@ -29,7 +32,8 @@ class Try_imageController extends Controller
         
         public function sub_store(Request $request)
         {
-            
+        $data = $request->all();
+        $result = Try_image::create($data);
         //   return response()->view('try_image.create_g3');
            return redirect()->route('image.subg3_create');
           
@@ -44,8 +48,9 @@ class Try_imageController extends Controller
         
         public function subg3_store(Request $request)
         {
-            
-          return response()->view('welcome');
+        $data = $request->all();
+        $result = Try_image::create($data);
+         return response()->view('welcome');
           
         }
     

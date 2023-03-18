@@ -12,11 +12,11 @@
             <form action="{{ route('image.subg3_store') }}" method="POST">
             @csrf
             <div>
-                <x-input-label for="Granularity" :value="__('2つ目の質問')" />
-                <input name='Granularity' class="form-control"></input>
+                <x-input-label for="image" :value="__('3つ目の質問')" />
+                <input name='image' class="form-control"></input>
             </div>
             <x-primary-button class="ml-3">
-                {{ __('3つ目の質問に移動') }}
+                {{ __('相手に移動') }}
             </x-primary-button>
         </form>
 </body>
