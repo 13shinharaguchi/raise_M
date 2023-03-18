@@ -12,19 +12,11 @@
      <form action="{{ route('image.store') }}" method="POST">
         @csrf
         <div>
-            <x-input-label for="Granularity_1" :value="__('1つ目の質問')" />
-            <input name='Granularity_1' class="form-control"></input>
-        </div>
-        <div>
-            <x-input-label for="Granularity_2" :value="__('2つ目の質問')" />
-            <input name='Granularity_2' class="form-control"></input>
-        </div>
-        <div>
-            <x-input-label for="Granularity_3" :value="__('3つ目の質問')" />
-            <input name='Granularity_3' class="form-control"></input>
+            <x-input-label for="Granularity" :value="__('1つ目の質問')" />
+            <input name='Granularity' class="form-control"></input>
         </div>
         <x-primary-button class="ml-3">
-            {{ __('相手に同じ質問をさせるに移動') }}
+            {{ __('2つ目の質問に移動') }}
         </x-primary-button>
     </form>
 </body>
