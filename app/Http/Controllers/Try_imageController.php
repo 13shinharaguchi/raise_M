@@ -53,9 +53,9 @@ class Try_imageController extends Controller
         {
         $data = $request->all();
         $result = Try_image::create($data);
-        //  return response()->view('welcome');
-         return redirect()->route('partner_image.create');
-          
+        //  ここのrouteでパートナーの名前を登録するページに遷移
+         return redirect()->route('partner_register');
+          // return redirect()->route('partner_image.create');
         }
     
 }
