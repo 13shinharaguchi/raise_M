@@ -6,6 +6,7 @@ use App\Http\Controllers\User_registerController;
 use App\Http\Controllers\Wanna_tryController;
 use App\Http\Controllers\Try_imageController;
 use App\Http\Controllers\Partner_try_imageController;
+use App\Http\Controllers\Table_of_contentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +40,10 @@ Route::get('/partner_try_image/sub_create', [Partner_try_imageController::class,
 Route::post('/partner_try_image/sub_store', [Partner_try_imageController::class, 'partner_sub_store'])->name('partner_image.sub_store');
 Route::get('/partner_try_image/subg3_create', [Partner_try_imageController::class, 'partner_subg3_create'])->name('partner_image.subg3_create');
 Route::post('/partner_try_image/subg3_store', [Partner_try_imageController::class, 'partner_subg3_store'])->name('partner_image.subg3_store');
+
+//目次コントローラ
+Route::get('/table_of_content', [Table_of_contentController::class, 'create'])->name('content.create');
+
 
 Route::get('/', function () {
     return view('welcome');
