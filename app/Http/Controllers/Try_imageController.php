@@ -32,7 +32,8 @@ class Try_imageController extends Controller
         public function sub_create ()
         {
         $granularity_id = 2;
-         return response()->view('try_image.create_g2',['granularity' => $granularity_id]);
+        $user = game_user::orderBy('created_at')->first();
+         return response()->view('try_image.create_g2',['granularity' => $granularity_id, 'user' => $user]);
                 
         }
         
@@ -49,7 +50,8 @@ class Try_imageController extends Controller
         {
             //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
         $granularity_id = 3;
-         return response()->view('try_image.create_g3',['granularity' => $granularity_id]);
+        $user = game_user::orderBy('created_at')->first();
+         return response()->view('try_image.create_g3',['granularity' => $granularity_id, 'user' => $user]);
                 
         }
         
