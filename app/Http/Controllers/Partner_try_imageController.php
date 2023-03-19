@@ -27,7 +27,8 @@ class Partner_try_imageController extends Controller
     {
         //フォルダー名も最初につけてあげる必要がある
         $granularity_id = 2;
-        return response()->view('try_image.partner_create_g2',['granularity' => $granularity_id]);
+        $user = game_user::orderBy('created_at', 'desc')->first();
+        return response()->view('try_image.partner_create_g2',['granularity' => $granularity_id, 'user' => $user]);
     }
     
     public function  partner_sub_store (Request $request)
@@ -42,7 +43,8 @@ class Partner_try_imageController extends Controller
     {
         //フォルダー名も最初につけてあげる必要がある
         $granularity_id = 3;
-        return response()->view('try_image.partner_create_g3',['granularity' => $granularity_id]);
+        $user = game_user::orderBy('created_at', 'desc')->first();
+        return response()->view('try_image.partner_create_g3',['granularity' => $granularity_id, 'user' => $user]);
     }
     
     public function  partner_subg3_store (Request $request)
