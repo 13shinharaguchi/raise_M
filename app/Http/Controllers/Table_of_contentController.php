@@ -35,5 +35,4 @@ class Table_of_contentController extends Controller
         return response()->view('table_of_contents.show_all',['main_records' => $main_record, 'partner_records' => $partner_record]);
     }
     
-    
 }
