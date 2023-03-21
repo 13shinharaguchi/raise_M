@@ -9,12 +9,12 @@
 <body>
     <h1>すべての結果を表示する</h1>
     
-    @foreach ($re as $e)
-        <div>{{$e -> image}}</div>
+    @foreach ($main_records as $main_record)
+        <div>{{$main_record -> image}}</div>
     @endforeach
     
-    @foreach ($ree as $ee)
-        <div>{{$ee -> image}}</div>
+    @foreach ($partner_records as $partner_record)
+        <div>{{$partner_record -> image}}</div>
     @endforeach
 </body>
 </html>

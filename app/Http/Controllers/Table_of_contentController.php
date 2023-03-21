@@ -27,10 +27,12 @@ class Table_of_contentController extends Controller
     
     public function all ()
     {
-        $records = try_image::where('user_id', 103)->get();
-        $reco = try_image::where('user_id', 104)->get();
+        $main_user = game_user::orderBy('created_at')->first();
+        $partner_user = game_user::orderBy('created_at', 'desc')->first();
+        $main_record = try_image::where('user_id', $main_user -> id)->get();
+        $partner_record = try_image::where('user_id', $partner_user -> id)->get();
         // dd($records);
-        return response()->view('table_of_contents.show_all',['re' => $records, 'ree' => $reco]);
+        return response()->view('table_of_contents.show_all',['main_records' => $main_record, 'partner_records' => $partner_record]);
     }
     
     
