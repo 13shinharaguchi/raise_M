@@ -8,8 +8,10 @@
 </head>
 <body>
     <h1>ここにはボタンをおいて、クリックされたらランダムで目次を作成する</h1>
-    <x-primary-button class="ml-3">
-        {{ __('ランダムに目次を作成') }}
-    </x-primary-button>
+    <form action="{{ route('content.index') }}" method="GET">
+        <x-primary-button class="ml-3">
+            {{ __('ランダムに目次を作成、一覧へ') }}
+        </x-primary-button>
+    </form> 
 </body>
 </html>
