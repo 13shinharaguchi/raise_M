@@ -27,6 +27,11 @@ class Table_of_contentController extends Controller
     
     public function all ()
     {
-        return response()->view('table_of_contents.show_all');
+        $records = try_image::where('user_id', 103)->get();
+        $reco = try_image::where('user_id', 104)->get();
+        // dd($records);
+        return response()->view('table_of_contents.show_all',['re' => $records, 'ree' => $reco]);
     }
+    
+    
 }
