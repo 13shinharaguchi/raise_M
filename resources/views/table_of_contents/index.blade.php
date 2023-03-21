@@ -12,5 +12,10 @@
     <p>{{$image1 -> image}}</p>
     <p>{{$image2 -> image}}</p>
     <p>{{$image3 -> image}}</p>
+    <form action="{{ route('content.all') }}" method="GET">
+        <x-primary-button class="ml-3">
+            {{ __('すべて表示へ') }}
+        </x-primary-button>
+    </form>
 </body>
 </html>

@@ -44,6 +44,7 @@ Route::post('/partner_try_image/subg3_store', [Partner_try_imageController::clas
 //目次コントローラ
 Route::get('/table_of_content', [Table_of_contentController::class, 'create'])->name('content.create');
 Route::get('/table_of_content/index', [Table_of_contentController::class, 'index'])->name('content.index');
+Route::get('/table_of_content/show_all', [Table_of_contentController::class, 'all'])->name('content.all');
 
 Route::get('/', function () {
     return view('welcome');

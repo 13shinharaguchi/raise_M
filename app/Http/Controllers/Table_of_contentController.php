@@ -24,4 +24,9 @@ class Table_of_contentController extends Controller
                                                            'image2' => $random_image2,
                                                            'image3' => $random_image3]);
     }
+    
+    public function all ()
+    {
+        return response()->view('table_of_contents.show_all');
+    }
 }
