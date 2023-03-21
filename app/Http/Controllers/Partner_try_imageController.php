@@ -52,8 +52,8 @@ class Partner_try_imageController extends Controller
         $data = $request->all();
         // dd($data);
         $result = Try_image::create($data);
-        // return redirect()->route('partner_image.subg3_create');
-         return response()->view('welcome');
+        //  return response()->view('welcome');
+         return redirect()->route('content.create');
     }
    
     
