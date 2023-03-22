@@ -7,8 +7,7 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>パートナーサイド2</h1>
-    <div>ここにはユーザー名も表示する</div>
+    <p>{{ $user->name }}</p>
     <form action="{{ route('partner_image.sub_store') }}" method="POST">
         @csrf
         <div>
@@ -19,7 +18,7 @@
             <input name='user_id' class="hidden" value="{{ $user->id }}"></input>
             </div>
         </div>
-        <x-primary-button class="ml-3">
+        <x-primary-button>
             {{ __('3つ目の質問に移動') }}
         </x-primary-button>
     </form>

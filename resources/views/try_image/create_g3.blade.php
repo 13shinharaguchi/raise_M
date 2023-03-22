@@ -7,8 +7,7 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>ここにイメージや妄想を記入していく3</h1>
-    <div>ここにはユーザー名も表示する</div>
+    <p>{{ $user->name }}のイメージや妄想を記入していく</p>
             <form action="{{ route('image.subg3_store') }}" method="POST">
             @csrf
             <div>
@@ -19,7 +18,7 @@
                 <input name='user_id' class="hidden" value="{{ $user->id }}"></input>
                 </div>
             </div>
-            <x-primary-button class="ml-3">
+            <x-primary-button>
                 {{ __('相手に移動') }}
             </x-primary-button>
         </form>

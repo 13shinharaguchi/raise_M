@@ -7,8 +7,6 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>パートナーサイド3</h1>
-    <div>ここにはユーザー名も表示する</div>
         <form action="{{ route('partner_image.subg3_store') }}" method="POST">
         @csrf
         <div>
@@ -19,7 +17,7 @@
             <input name='user_id' class="hidden" value="{{ $user->id }}"></input>
             </div>
         </div>
-        <x-primary-button class="ml-3">
+        <x-primary-button>
             {{ __('ランダム一覧の表示') }}
         </x-primary-button>
     </form>

@@ -7,9 +7,9 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>ここにはボタンをおいて、クリックされたらランダムで目次を作成する</h1>
+    <!--書き方は他にもありそう-->
     <form action="{{ route('content.index') }}" method="GET">
-        <x-primary-button class="ml-3">
+        <x-primary-button>
             {{ __('ランダムに目次を作成、一覧へ') }}
         </x-primary-button>
     </form> 

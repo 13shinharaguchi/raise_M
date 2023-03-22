@@ -28,12 +28,5 @@ class AppServiceProvider extends ServiceProvider
   {
     $url->forceScheme('https');
     
-    App::terminating(function () 
-    {
-        // 以下のコードでは、なせかアプリケーション終了していないのに、画面が切り替わるときにデータが消える
-        // DB::table('game_users')->delete();
-        // DB::table('try_images')->delete();
-       
-    });
   }
 }
