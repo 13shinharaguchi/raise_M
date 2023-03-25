@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use App\Models\Try_image;
 use App\Models\game_user;
 
@@ -10,12 +11,11 @@ class Try_imageController extends Controller
 {
         public function create ()
         {
-            //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
+         $wanna_try = Cookie::get('wanna_try');
         $granularity_id = 1;
         //名前の表示(ふたりしか登録しないから順番をどうするか)
-        // $user = game_user::where('id', 73)->first();
         $user = game_user::orderBy('created_at')->first();
-         return response()->view('try_image.create',['granularity' => $granularity_id ,'user' => $user]);
+         return response()->view('try_image.create',['granularity' => $granularity_id ,'user' => $user, 'wanna_try' => $wanna_try]);
                 
         }
         
