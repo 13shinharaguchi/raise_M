@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\game_user;
 
@@ -24,6 +26,8 @@ class User_registerController extends Controller
      */
     public function create()
     {
+        DB::table('try_images')->truncate();
+        DB::table('game_users')->truncate();
         return response()->view('user_register.create');
     }
 
