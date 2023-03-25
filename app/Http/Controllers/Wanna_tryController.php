@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class Wanna_tryController extends Controller
 {
@@ -12,8 +13,9 @@ class Wanna_tryController extends Controller
     }
     
     public function store(Request $request){
-            //下記部分をセッションなんなりに保存した場合は、responseではなく、redirectに変更したほうがよき
-        //  return response()->view('try_image.create');
+        $wanna_try = $request->input('wanna_try');
+        Cookie::queue('wanna_try', $wanna_try);
+        
         return redirect()->route('image.create');
     }
     

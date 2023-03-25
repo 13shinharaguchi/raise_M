@@ -8,6 +8,7 @@
 </head>
 <body>
     <div>{{ $user->name }}</div>
+    <div>ここにCookieの表示をする{{$wanna_try}}</div>
      <form action="{{ route('image.store') }}" method="POST">
         @csrf
         <div>
