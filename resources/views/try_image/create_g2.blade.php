@@ -7,7 +7,7 @@
     <title>raise</title>
 </head>
 <body>
-    <p>{{ $user->name }}が思ったイメージや妄想を記入していく</p>
+    <div>{{ $user->name }}</div>
         <form action="{{ route('image.sub_store') }}" method="POST">
             @csrf
             <div>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <x-primary-button>
-                {{ __('3つ目の質問に移動') }}
+                {{ __('登録する') }}
             </x-primary-button>
         </form>
 </body>

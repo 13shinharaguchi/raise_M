@@ -8,14 +8,14 @@
 </head>
 <body>
     <div>
-        <h1>ユーザー登録</h1>
+        <h1>ユーザー登録名</h1>
         <form action="{{ route('user_register.store') }}" method="POST">
                 @csrf
                 <div>
                      <x-text-input name='name' required autofocus />
                 </div>
                 <x-primary-button>
-                 {{ __('登録') }}
+                 {{ __('登録する') }}
                  </x-primary-button>
         </form>
     </div>

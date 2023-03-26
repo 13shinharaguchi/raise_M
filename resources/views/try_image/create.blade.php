@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>{{ $user->name }}</div>
-    <div>ここにCookieの表示をする{{$wanna_try}}</div>
+    <div>やってみたいこと：{{$wanna_try}}</div>
      <form action="{{ route('image.store') }}" method="POST">
         @csrf
         <div>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <x-primary-button>
-            {{ __('2つ目の質問に移動') }}
+            {{ __('登録') }}
         </x-primary-button>
     </form>
 </body>
