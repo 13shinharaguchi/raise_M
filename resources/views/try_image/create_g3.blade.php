@@ -7,7 +7,7 @@
     <title>raise</title>
 </head>
 <body>
-    <p>{{ $user->name }}のイメージや妄想を記入していく</p>
+    <div>{{ $user->name }}</div>
             <form action="{{ route('image.subg3_store') }}" method="POST">
             @csrf
             <div>

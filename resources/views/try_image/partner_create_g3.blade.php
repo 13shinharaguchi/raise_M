@@ -7,6 +7,7 @@
     <title>raise</title>
 </head>
 <body>
+    <div>{{ $user->name }}</div>
         <form action="{{ route('partner_image.subg3_store') }}" method="POST">
         @csrf
         <div>

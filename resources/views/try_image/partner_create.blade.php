@@ -19,7 +19,7 @@
             </div>
         </div>
         <x-primary-button>
-            {{ __('2つ目の質問に移動') }}
+            {{ __('登録') }}
         </x-primary-button>
     </form>
 </body>
