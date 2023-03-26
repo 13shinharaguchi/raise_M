@@ -8,10 +8,9 @@
 </head>
 <body>
     <div>
-        <h1>最初の画面</h1>
         <form action="{{ route('user_register.create') }}" method="GET">
         <x-primary-button class="ml-3">
-          {{ __('ユーザ名登録に進む') }}
+          {{ __('クリックして始める') }}
         </x-primary-button>
         </form>
     </div>
