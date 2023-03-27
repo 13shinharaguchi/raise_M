@@ -20,6 +20,5 @@
         </x-primary-button>
         </form>
     </div>
-    
 </body>
 </html>
