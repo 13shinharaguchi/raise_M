@@ -12,9 +12,10 @@
     <title>raise</title>
 </head>
 <body>
-    <div>
-        <h1 class="bg-red-500">ユーザー登録名</h1>
-        <form action="{{ route('user_register.store') }}" method="POST">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div>
+            <h1 class="bg-red-500">ニックネームをおしえてね！</h1>
+            <form action="{{ route('user_register.store') }}" method="POST">
                 @csrf
                 <div>
                      <x-text-input name='name' required autofocus />
@@ -22,7 +23,8 @@
                 <x-primary-button>
                  {{ __('登録する') }}
                  </x-primary-button>
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>

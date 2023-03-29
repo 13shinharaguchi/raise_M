@@ -12,12 +12,12 @@
     <title>raise</title>
 </head>
 <body>
-    <div class="bg-red-500">文字</div>
-    <div>
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" >
         <form action="{{ route('user_register.create') }}" method="GET">
-        <x-primary-button class="ml-3">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">
+            <!--言葉を変更する-->
           {{ __('クリックして始める') }}
-        </x-primary-button>
+        </button>
         </form>
     </div>
 </body>

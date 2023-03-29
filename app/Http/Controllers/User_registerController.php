@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Http\Request;
 use App\Models\game_user;
 
@@ -28,6 +29,7 @@ class User_registerController extends Controller
     {
         DB::table('try_images')->truncate();
         DB::table('game_users')->truncate();
+        Cookie::queue(Cookie::forget('wanna_try'));
         return response()->view('user_register.create');
     }
 
