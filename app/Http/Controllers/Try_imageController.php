@@ -6,16 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use App\Models\Try_image;
 use App\Models\game_user;
+use App\Models\Question_Box;
 
 class Try_imageController extends Controller
 {
         public function create ()
         {
-         $wanna_try = Cookie::get('wanna_try');
+        $wanna_try = Cookie::get('wanna_try');
         $granularity_id = 1;
-        //名前の表示(ふたりしか登録しないから順番をどうするか)
         $user = game_user::orderBy('created_at')->first();
-         return response()->view('try_image.create',['granularity' => $granularity_id ,'user' => $user, 'wanna_try' => $wanna_try]);
+        $question1 = Question_Box::where('kind_number', 1)->inRandomOrder()->first();
+        $Q1 = $question1 -> question;
+        // dd($Q1);
+        Cookie::queue('$Q1', $Q1);
+         return response()->view('try_image.create',['granularity' => $granularity_id,
+                                                     'user' => $user, 
+                                                     'wanna_try' => $wanna_try, 
+                                                     'question1' => $question1]);
                 
         }
         
@@ -33,7 +40,10 @@ class Try_imageController extends Controller
         {
         $granularity_id = 2;
         $user = game_user::orderBy('created_at')->first();
-         return response()->view('try_image.create_g2',['granularity' => $granularity_id, 'user' => $user]);
+        $question2 = Question_Box::where('kind_number', 2)->inRandomOrder()->first();
+        $Q2 = $question2 -> question;
+        Cookie::queue('$Q2', $Q2);
+         return response()->view('try_image.create_g2',['granularity' => $granularity_id, 'user' => $user, 'question2' => $question2]);
                 
         }
         
@@ -51,7 +61,11 @@ class Try_imageController extends Controller
             //view('try_image.create')はルートではなく、'try_image.create'というファイルを探してもってきている
         $granularity_id = 3;
         $user = game_user::orderBy('created_at')->first();
-         return response()->view('try_image.create_g3',['granularity' => $granularity_id, 'user' => $user]);
+        $question3 = Question_Box::where('kind_number', 3)->inRandomOrder()->first();
+        $Q3 = $question3 -> question;
+        // dd($Q1);
+        Cookie::queue('$Q3', $Q3);
+        return response()->view('try_image.create_g3',['granularity' => $granularity_id, 'user' => $user, 'question3' => $question3]);
                 
         }
         

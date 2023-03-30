@@ -19,7 +19,7 @@
         <div>
             <!--inputlabwlは削除する-->
             <x-input-label for="image" :value="__('1つ目の質問')" />
-            <div>1つ目の質問</div>
+            <div>{{$question1 -> question}}</div>
             <input name='image' class="form-control"></input>
             <div style="display:none;">
             <input name='granularity_number' class="hidden" value="{{ $granularity }}"></input>
