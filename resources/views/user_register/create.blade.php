@@ -14,11 +14,11 @@
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <div>
-            <h1 class="bg-red-500">ニックネームをおしえてね！</h1>
-            <form action="{{ route('user_register.store') }}" method="POST">
+            <h1 class="bg-red-500">ニックネームをおしえてね</h1>
+            <form action="{{ route('user_register.store') }}" method="POST" class="x-4 py-2">
                 @csrf
                 <div>
-                     <x-text-input name='name' required autofocus />
+                     <input name='name' class="h-16 bg-white " required autofocus />
                 </div>
                 <x-primary-button>
                  {{ __('登録する') }}
