@@ -19,8 +19,8 @@
             <x-input-label for="image" :value="__('3つ目の質問')" />
             <input name='image' class="form-control"></input>
             <div style="display:none;">
-            <input name='granularity_id' class="hidden" value="{{ $granularity }}"></input>
-            <input name='user_id' class="hidden" value="{{ $user->id }}"></input>
+            <input name='granularity_number' class="hidden" value="{{ $granularity }}"></input>
+            <input name='game_user_number' class="hidden" value="{{ $user->id }}"></input>
             </div>
         </div>
         <x-primary-button>
