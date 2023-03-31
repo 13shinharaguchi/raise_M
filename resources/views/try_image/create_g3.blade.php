@@ -18,7 +18,7 @@
             <div>
                 <x-input-label for="image" :value="__('3つ目の質問')" />
                 <div>{{$question3}}</div>
-                <input name='image' class="form-control"></input>
+                <input name='image' required autofocus ></input>
                 <div style="display:none;">
                 <input name='granularity_number' class="form-control" value="{{ $granularity }}"></input>
                 <input name='game_user_number' class="hidden" value="{{ $user->id }}"></input>
