@@ -14,12 +14,11 @@
 <body>
     <h1>すべての結果を表示する</h1>
     
-    @foreach ($main_records as $main_record)
-        <div>{{$main_record -> image}}</div>
-    @endforeach
-    
-    @foreach ($partner_records as $partner_record)
-        <div>{{$partner_record -> image}}</div>
-    @endforeach
+<div>{{ $image1}}</div>
+<div>{{ $image2}}</div>
+<div>{{ $image3}}</div>
+<div>{{ $p_image1}}</div>
+<div>{{ $p_image2}}</div>
+<div>{{ $p_image3}}</div>
 </body>
 </html>

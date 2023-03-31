@@ -18,7 +18,7 @@
             <form action="{{ route('user_register.store') }}" method="POST" class="x-4 py-2">
                 @csrf
                 <div>
-                     <input name='name' class="h-16 bg-white " required autofocus />
+                     <input name='game_user' class="h-16 bg-white " required autofocus />
                 </div>
                 <x-primary-button>
                  {{ __('登録する') }}
