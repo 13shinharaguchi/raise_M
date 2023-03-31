@@ -12,7 +12,7 @@
     <title>raise</title>
 </head>
 <body>
-    <div>{{ $user->name }}</div>
+    <div>{{ $user}}</div>
     <div>やってみたいこと：{{$wanna_try}}</div>
      <form action="{{ route('image.store') }}" method="POST">
         @csrf
@@ -20,10 +20,6 @@
             <x-input-label for="image" :value="__('1つ目の質問')" />
             <div>{{$question1}}</div>
             <input name='image'  required autofocus></input>
-            <div style="display:none;">
-            <input name='granularity_number' class="hidden" value="{{ $granularity }}"></input>
-            <input name='game_user_number' class="hidden" value="{{ $user->id }}"></input>
-            </div>
         </div>
         <x-primary-button>
             {{ __('登録') }}

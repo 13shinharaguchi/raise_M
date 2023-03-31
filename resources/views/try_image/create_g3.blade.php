@@ -12,7 +12,7 @@
     <title>raise</title>
 </head>
 <body>
-    <div>{{ $user->name }}</div>
+    <div>{{ $user}}</div>
             <form action="{{ route('image.subg3_store') }}" method="POST">
             @csrf
             <div>
@@ -20,8 +20,6 @@
                 <div>{{$question3}}</div>
                 <input name='image' required autofocus ></input>
                 <div style="display:none;">
-                <input name='granularity_number' class="form-control" value="{{ $granularity }}"></input>
-                <input name='game_user_number' class="hidden" value="{{ $user->id }}"></input>
                 </div>
             </div>
             <x-primary-button>

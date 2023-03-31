@@ -41,8 +41,10 @@ class User_registerController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $result = game_user::create($data);
+        // $data = $request->all();
+        // $result = game_user::create($data);
+        $game_user = $request->input('game_user');
+        Cookie::queue('game_user', $game_user);
         return redirect()->route('wanna_try.create');
     }
 
@@ -98,8 +100,10 @@ class User_registerController extends Controller
     
     public function partner_register_store (Request $request)
     {
-        $data = $request->all();
-        $result = game_user::create($data);
+        // $data = $request->all();
+        // $result = game_user::create($data);
+        $partner_game_user = $request->input('partner_game_user');
+        Cookie::queue('partner_game_user', $partner_game_user);
         return redirect()->route('partner_image.create');
     }
 }

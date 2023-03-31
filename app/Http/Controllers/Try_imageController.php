@@ -13,10 +13,11 @@ class Try_imageController extends Controller
         public function create ()
         {
         $wanna_try = Cookie::get('wanna_try');
-        $granularity_id = 1;
-        $user = game_user::orderBy('created_at')->first();
+        // $granularity_id = 1;
+        // $user = game_user::orderBy('created_at')->first();
+        $user = Cookie::get('game_user');
         $question1 = Cookie::get('Q1');
-         return response()->view('try_image.create',['granularity' => $granularity_id,
+         return response()->view('try_image.create',[
                                                      'user' => $user, 
                                                      'wanna_try' => $wanna_try, 
                                                      'question1' => $question1]);
@@ -25,8 +26,11 @@ class Try_imageController extends Controller
         
         public function store(Request $request)
         {
-        $data = $request->all();
-        $result = Try_image::create($data);
+        // $data = $request->all();
+        // $result = Try_image::create($data);
+        
+        $image1 = $request->input('image');
+        Cookie::queue('image1', $image1);
         
          return redirect()->route('image.sub_create');
          
@@ -34,34 +38,40 @@ class Try_imageController extends Controller
         
         public function sub_create ()
         {
-        $granularity_id = 2;
-        $user = game_user::orderBy('created_at')->first();
+        // $granularity_id = 2;
+        // $user = game_user::orderBy('created_at')->first();
+        $user = Cookie::get('game_user');
         $question2 = Cookie::get('Q2');
-         return response()->view('try_image.create_g2',['granularity' => $granularity_id, 'user' => $user, 'question2' => $question2]);
+         return response()->view('try_image.create_g2',['user' => $user, 'question2' => $question2]);
                 
         }
         
         public function sub_store(Request $request)
         {
-        $data = $request->all();
-        $result = Try_image::create($data);
+        // $data = $request->all();
+        // $result = Try_image::create($data);
+            $image2 = $request->input('image');
+            Cookie::queue('image2', $image2);
            return redirect()->route('image.subg3_create');
           
         }
         
         public function subg3_create ()
         {
-        $granularity_id = 3;
-        $user = game_user::orderBy('created_at')->first();
+        // $granularity_id = 3;
+        // $user = game_user::orderBy('created_at')->first();
+        $user = Cookie::get('game_user');
         $question3 = Cookie::get('Q3');
-        return response()->view('try_image.create_g3',['granularity' => $granularity_id, 'user' => $user, 'question3' => $question3]);
+        return response()->view('try_image.create_g3',['user' => $user, 'question3' => $question3]);
                 
         }
         
         public function subg3_store(Request $request)
         {
-        $data = $request->all();
-        $result = Try_image::create($data);
+        // $data = $request->all();
+        // $result = Try_image::create($data);
+            $image3 = $request->input('image');
+            Cookie::queue('image3', $image3);
          return redirect()->route('partner_register');
         }
     
