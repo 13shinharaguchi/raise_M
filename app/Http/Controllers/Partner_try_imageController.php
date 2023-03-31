@@ -13,7 +13,7 @@ class Partner_try_imageController extends Controller
     {
         $granularity_id = 1;
         $user = game_user::orderBy('created_at', 'desc')->first();
-        $question1 = Cookie::get('$Q1');
+        $question1 = Cookie::get('Q1');
         return response()->view('try_image.partner_create',['granularity' => $granularity_id , 'user' => $user, 'question1' => $question1]);
     }
     
@@ -30,7 +30,7 @@ class Partner_try_imageController extends Controller
         //フォルダー名も最初につけてあげる必要がある
         $granularity_id = 2;
         $user = game_user::orderBy('created_at', 'desc')->first();
-        $question2 = Cookie::get('$Q2');
+        $question2 = Cookie::get('Q2');
         return response()->view('try_image.partner_create_g2',['granularity' => $granularity_id, 'user' => $user, 'question2' => $question2]);
     }
     
@@ -47,7 +47,7 @@ class Partner_try_imageController extends Controller
         //フォルダー名も最初につけてあげる必要がある
         $granularity_id = 3;
         $user = game_user::orderBy('created_at', 'desc')->first();
-        $question3 = Cookie::get('$Q3');
+        $question3 = Cookie::get('Q3');
         return response()->view('try_image.partner_create_g3',['granularity' => $granularity_id, 'user' => $user, 'question3' => $question3]);
     }
     

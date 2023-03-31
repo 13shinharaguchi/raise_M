@@ -17,7 +17,7 @@
             @csrf
             <div>
                 <x-input-label for="image" :value="__('2つ目の質問')" />
-                <div>{{$question2 -> question}}</div>
+                <div>{{$question2}}</div>
                 <input name='image' class="form-control"></input>
                 <div style="display:none;">
                 <input name='granularity_number' class="form-control" value="{{ $granularity }}"></input>
