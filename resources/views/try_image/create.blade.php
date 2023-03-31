@@ -17,7 +17,6 @@
      <form action="{{ route('image.store') }}" method="POST">
         @csrf
         <div>
-            <!--inputlabwlは削除する-->
             <x-input-label for="image" :value="__('1つ目の質問')" />
             <div>{{$question1}}</div>
             <input name='image'  required autofocus></input>

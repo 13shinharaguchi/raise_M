@@ -16,7 +16,6 @@
     <div>
         <h1>パートナー名の登録</h1>         
         <div>
-            <!--ユーザー名を登録する、routeのuser_register.storeで処理してもらう-->
             <form action="{{ route('partner_register_store') }}" method="POST">
                 @csrf
                 <div>
