@@ -15,7 +15,6 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" >
         <form action="{{ route('user_register.create') }}" method="GET">
         <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">
-            <!--言葉を変更する-->
           {{ __('クリックして始める') }}
         </button>
         </form>
