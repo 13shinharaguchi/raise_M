@@ -14,9 +14,9 @@
 <body>
     <h1>ここにランダム結果を表示する</h1>
     <div>{{$wanna_try}}に対するイメージだ！</div>
-    <p>{{$image1}}</p>
-    <p>{{$image2}}</p>
-    <p>{{$image3}}</p>
+    <p>{{$random_image1}}</p>
+    <p>{{$random_image2}}</p>
+    <p>{{$random_image3}}</p>
     <form action="{{ route('content.all') }}" method="GET">
         <x-primary-button class="ml-3">
             {{ __('すべて表示へ') }}
