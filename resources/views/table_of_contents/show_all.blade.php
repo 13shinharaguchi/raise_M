@@ -22,6 +22,8 @@
         <p>{{ $p_image1}}</p>
         <p>{{ $p_image2}}</p>
         <p>{{ $p_image3}}</p>
+        <!--ボタンのようにみせる-->
+        <a href="{{ URL::previous() }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">戻る</a>
     </div>
 </body>
 </html>
