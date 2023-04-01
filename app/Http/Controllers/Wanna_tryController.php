@@ -9,8 +9,10 @@ use App\Models\Question_Box;
 class Wanna_tryController extends Controller
 {
     public function create (){
-         return response()->view('wanna_try.create');
+        $user = Cookie::get('game_user');
+         return response()->view('wanna_try.create', ['user' => $user]);
     }
+    
     
     public function store(Request $request){
         $wanna_try = $request->input('wanna_try');

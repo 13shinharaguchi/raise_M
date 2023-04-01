@@ -16,15 +16,13 @@ class Table_of_contentController extends Controller
     
     public function index ()
     {
-        // $user = game_user::orderBy('created_at')->first();
         $user = Cookie::get('game_user');
-        // $random_image1 = Try_image::where('granularity_number', 1)->inRandomOrder()->first();
-        // $random_image2 = Try_image::where('granularity_number', 2)->inRandomOrder()->first();
-        // $random_image3 = Try_image::where('granularity_number', 3)->inRandomOrder()->first();
+        $wanna_try = Cookie::get('wanna_try');
         $random_image1 = Cookie::get('image1');
         $random_image2 = Cookie::get('image2');
         $random_image3 = Cookie::get('image3');
         return response()->view('table_of_contents.index',['user' => $user,
+                                                           'wanna_try' => $wanna_try,
                                                            'image1' => $random_image1,
                                                            'image2' => $random_image2,
                                                            'image3' => $random_image3]);
@@ -32,24 +30,32 @@ class Table_of_contentController extends Controller
     
     public function all ()
     {
-        // $main_user = game_user::orderBy('created_at')->first();
-        // $partner_user = game_user::orderBy('created_at', 'desc')->first();
-        // $main_record = try_image::where('game_user_number', $main_user -> id)->get();
-        // $partner_record = try_image::where('game_user_number', $partner_user -> id)->get();
-        
+        $user = Cookie::get('game_user');
+        $partner_user = Cookie::get('partner_game_user');
         $random_image1 = Cookie::get('image1');
         $random_image2 = Cookie::get('image2');
         $random_image3 = Cookie::get('image3');
         $p_random_image1 = Cookie::get('p_image1');
         $p_random_image2 = Cookie::get('p_image2');
         $p_random_image3 = Cookie::get('p_image3');
-        return response()->view('table_of_contents.show_all',['image1' => $random_image1,
+        return response()->view('table_of_contents.show_all',['user' => $user,
+                                                              'partner_user' => $partner_user,
+                                                              'image1' => $random_image1,
                                                               'image2' => $random_image2,
                                                               'image3' => $random_image3,
                                                               'p_image1' => $p_random_image1,
                                                               'p_image2' => $p_random_image2,
                                                               'p_image3' => $p_random_image3,
-            ]);
+        ]);
+        
+        // $images = ['image1', 'image2', 'image3', 'p_image1', 'p_image2', 'p_image3'];
+        // $random_images = [];
+
+        // foreach ($images as $image) {
+        //     $random_images[$image] = Cookie::get($image);
+        // }
+
+        // return response()->view('table_of_contents.show_all', $random_images);
     }
     
 }

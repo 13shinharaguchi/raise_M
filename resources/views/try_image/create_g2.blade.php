@@ -13,6 +13,7 @@
 </head>
 <body>
     <div>{{ $user}}</div>
+    <div>やってみたいこと：{{$wanna_try}}</div>
         <form action="{{ route('image.sub_store') }}" method="POST">
             @csrf
             <div>

@@ -14,7 +14,9 @@
 </head>
 <body>
     <div>
-        <h1>パートナー名の登録</h1>         
+        <h1>パートナー名の登録</h1> 
+        <p>{{$user}}のやってみたいことは、{{$wanna_try}}　です</p>
+        <p>あなたもなりきって答えみよう！</p>
         <div>
             <form action="{{ route('partner_register_store') }}" method="POST">
                 @csrf
