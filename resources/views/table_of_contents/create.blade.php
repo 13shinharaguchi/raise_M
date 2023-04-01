@@ -12,7 +12,6 @@
     <title>raise</title>
 </head>
 <body>
-    <!--書き方は他にもありそう-->
     <form action="{{ route('content.index') }}" method="GET">
         <x-primary-button>
             {{ __('ランダムに目次を作成、一覧へ') }}

@@ -27,15 +27,10 @@ class User_registerController extends Controller
      */
     public function create()
     {
-        // DB::table('try_images')->truncate();
-        // DB::table('game_users')->truncate();
-        // 配列にして削除する
         $cookie_kinds = ['wanna_try','image1', 'image2', 'image3', 'p_image1','p_image2','p_image3','game_user','partner_game_user'];
         foreach ($cookie_kinds as $cookie_kind) {
-            // Cookie::forget($cookie_kind);
             Cookie::queue(Cookie::forget($cookie_kind));
         }
-        // Cookie::queue(Cookie::forget($cookie_forget));
         return response()->view('user_register.create');
     }
 
@@ -47,8 +42,6 @@ class User_registerController extends Controller
      */
     public function store(Request $request)
     {
-        // $data = $request->all();
-        // $result = game_user::create($data);
         $game_user = $request->input('game_user');
         Cookie::queue('game_user', $game_user);
         return redirect()->route('wanna_try.create');
@@ -101,7 +94,6 @@ class User_registerController extends Controller
     
     public function partner_register ()
     {
-        
         $user = Cookie::get('game_user');
         $wanna_try = Cookie::get('wanna_try');
         return response()->view('user_register.partner_create',['user' => $user, 
@@ -110,8 +102,6 @@ class User_registerController extends Controller
     
     public function partner_register_store (Request $request)
     {
-        // $data = $request->all();
-        // $result = game_user::create($data);
         $partner_game_user = $request->input('partner_game_user');
         Cookie::queue('partner_game_user', $partner_game_user);
         return redirect()->route('partner_image.create');
