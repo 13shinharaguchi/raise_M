@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>ここにランダム結果を表示する</h1>
-    <p>{{$user}}</p>
+    <div>{{$wanna_try}}に対するイメージだ！</div>
     <p>{{$image1}}</p>
     <p>{{$image2}}</p>
     <p>{{$image3}}</p>

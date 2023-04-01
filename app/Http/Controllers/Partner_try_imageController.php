@@ -47,10 +47,10 @@ class Partner_try_imageController extends Controller
     
     public function partner_subg3_create ()
     {
-        $granularity_id = 3;
-        $user = game_user::orderBy('created_at', 'desc')->first();
+        // $granularity_id = 3;
+        $user = Cookie::get('partner_game_user');
         $question3 = Cookie::get('Q3');
-        return response()->view('try_image.partner_create_g3',['granularity' => $granularity_id, 'user' => $user, 'question3' => $question3]);
+        return response()->view('try_image.partner_create_g3',['user' => $user, 'question3' => $question3]);
     }
     
     public function  partner_subg3_store (Request $request)

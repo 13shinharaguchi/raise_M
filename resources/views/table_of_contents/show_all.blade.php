@@ -13,12 +13,13 @@
 </head>
 <body>
     <h1>すべての結果を表示する</h1>
-    
-<div>{{ $image1}}</div>
-<div>{{ $image2}}</div>
-<div>{{ $image3}}</div>
-<div>{{ $p_image1}}</div>
-<div>{{ $p_image2}}</div>
-<div>{{ $p_image3}}</div>
+    <p>{{$user}}</p>
+    <p>{{$partner_user}}</p>
+    <div>{{ $image1}}</div>
+    <div>{{ $image2}}</div>
+    <div>{{ $image3}}</div>
+    <div>{{ $p_image1}}</div>
+    <div>{{ $p_image2}}</div>
+    <div>{{ $p_image3}}</div>
 </body>
 </html>

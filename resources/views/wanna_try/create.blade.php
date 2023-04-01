@@ -7,7 +7,7 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>やってみたいことを登録する</h1>
+    <p>{{$user}}のやってみたいことを登録する</p>
     <form action="{{ route('wanna_try.store') }}" method="POST">
     @csrf
         <div>

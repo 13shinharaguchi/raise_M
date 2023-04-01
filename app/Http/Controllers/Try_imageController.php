@@ -40,9 +40,12 @@ class Try_imageController extends Controller
         {
         // $granularity_id = 2;
         // $user = game_user::orderBy('created_at')->first();
+        $wanna_try = Cookie::get('wanna_try');
         $user = Cookie::get('game_user');
         $question2 = Cookie::get('Q2');
-         return response()->view('try_image.create_g2',['user' => $user, 'question2' => $question2]);
+         return response()->view('try_image.create_g2',['user' => $user, 
+                                                        'wanna_try' => $wanna_try,
+                                                        'question2' => $question2]);
                 
         }
         
@@ -60,9 +63,12 @@ class Try_imageController extends Controller
         {
         // $granularity_id = 3;
         // $user = game_user::orderBy('created_at')->first();
+        $wanna_try = Cookie::get('wanna_try');
         $user = Cookie::get('game_user');
         $question3 = Cookie::get('Q3');
-        return response()->view('try_image.create_g3',['user' => $user, 'question3' => $question3]);
+        return response()->view('try_image.create_g3',['user' => $user, 
+                                                       'wanna_try' => $wanna_try,
+                                                       'question3' => $question3]);
                 
         }
         

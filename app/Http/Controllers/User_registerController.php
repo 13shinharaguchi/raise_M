@@ -27,9 +27,15 @@ class User_registerController extends Controller
      */
     public function create()
     {
-        DB::table('try_images')->truncate();
-        DB::table('game_users')->truncate();
-        Cookie::queue(Cookie::forget('wanna_try'));
+        // DB::table('try_images')->truncate();
+        // DB::table('game_users')->truncate();
+        // 配列にして削除する
+        $cookie_kinds = ['wanna_try','image1', 'image2', 'image3', 'p_image1','p_image2','p_image3','game_user','partner_game_user'];
+        foreach ($cookie_kinds as $cookie_kind) {
+            // Cookie::forget($cookie_kind);
+            Cookie::queue(Cookie::forget($cookie_kind));
+        }
+        // Cookie::queue(Cookie::forget($cookie_forget));
         return response()->view('user_register.create');
     }
 
@@ -95,7 +101,11 @@ class User_registerController extends Controller
     
     public function partner_register ()
     {
-        return response()->view('user_register.partner_create');
+        
+        $user = Cookie::get('game_user');
+        $wanna_try = Cookie::get('wanna_try');
+        return response()->view('user_register.partner_create',['user' => $user, 
+                                                                'wanna_try' => $wanna_try]);
     }
     
     public function partner_register_store (Request $request)
