@@ -12,19 +12,19 @@
     <title>raise</title>
 </head>
 <body>
-    <div>{{ $user}}</div>
-    <form action="{{ route('partner_image.store') }}" method="POST">
-        @csrf
-        <div>
-            <x-input-label for="image" :value="__('1つ目の質問')" />
-            <div>質問：{{$question1}}</div>
-            <input name='image' required autofocus></input>
-            <div style="display:none;">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div>{{ $user}}</div>
+        <form action="{{ route('partner_image.store') }}" method="POST">
+            @csrf
+            <div>
+                <x-input-label for="image" :value="__('1つ目の質問')" />
+                <div>質問：{{$question1}}</div>
+                <input name='image' required autofocus></input>
             </div>
-        </div>
-        <x-primary-button>
-            {{ __('登録') }}
-        </x-primary-button>
-    </form>
+            <x-primary-button>
+                {{ __('登録') }}
+            </x-primary-button>
+        </form>
+    </div>
 </body>
 </html>

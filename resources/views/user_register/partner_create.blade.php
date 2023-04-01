@@ -13,7 +13,7 @@
     <title>raise</title>
 </head>
 <body>
-    <div>
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <h1>パートナー名の登録</h1> 
         <p>{{$user}}のやってみたいことは、{{$wanna_try}}　です</p>
         <p>あなたもなりきって答えみよう！</p>

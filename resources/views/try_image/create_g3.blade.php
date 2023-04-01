@@ -12,20 +12,20 @@
     <title>raise</title>
 </head>
 <body>
-    <div>{{ $user}}</div>
-    <div>やってみたいこと：{{$wanna_try}}</div>
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div>{{ $user}}</div>
+        <div>やってみたいこと：{{$wanna_try}}</div>
             <form action="{{ route('image.subg3_store') }}" method="POST">
-            @csrf
+                @csrf
             <div>
                 <x-input-label for="image" :value="__('3つ目の質問')" />
                 <div>{{$question3}}</div>
                 <input name='image' required autofocus ></input>
-                <div style="display:none;">
-                </div>
             </div>
             <x-primary-button>
                 {{ __('相手に移動') }}
             </x-primary-button>
         </form>
+    </div>
 </body>
 </html>

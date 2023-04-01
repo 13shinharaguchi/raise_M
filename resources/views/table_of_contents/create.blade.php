@@ -12,10 +12,12 @@
     <title>raise</title>
 </head>
 <body>
-    <form action="{{ route('content.index') }}" method="GET">
-        <x-primary-button>
-            {{ __('ランダムに目次を作成、一覧へ') }}
-        </x-primary-button>
-    </form> 
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <form action="{{ route('content.index') }}" method="GET">
+            <x-primary-button>
+                {{ __('ランダムに目次を作成、一覧へ') }}
+            </x-primary-button>
+        </form>
+    </div>
 </body>
 </html>
