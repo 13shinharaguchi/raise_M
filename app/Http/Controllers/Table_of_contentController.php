@@ -18,34 +18,37 @@ class Table_of_contentController extends Controller
     {
         $user = Cookie::get('game_user');
         $wanna_try = Cookie::get('wanna_try');
-        $random_image1 = Cookie::get('image1');
-        $random_image2 = Cookie::get('image2');
-        $random_image3 = Cookie::get('image3');
+        $image1 = Cookie::get('image1');
+        $image2 = Cookie::get('image2');
+        $image3 = Cookie::get('image3');
+        $p_image1 = Cookie::get('p_image1');
+        $p_image2 = Cookie::get('p_image2');
+        $p_image3 = Cookie::get('p_image3');
         return response()->view('table_of_contents.index',['user' => $user,
                                                            'wanna_try' => $wanna_try,
-                                                           'image1' => $random_image1,
-                                                           'image2' => $random_image2,
-                                                           'image3' => $random_image3]);
+                                                           'image1' => $image1,
+                                                           'image2' => $image2,
+                                                           'image3' => $image3]);
     }
     
     public function all ()
     {
         $user = Cookie::get('game_user');
         $partner_user = Cookie::get('partner_game_user');
-        $random_image1 = Cookie::get('image1');
-        $random_image2 = Cookie::get('image2');
-        $random_image3 = Cookie::get('image3');
-        $p_random_image1 = Cookie::get('p_image1');
-        $p_random_image2 = Cookie::get('p_image2');
-        $p_random_image3 = Cookie::get('p_image3');
+        $image1 = Cookie::get('image1');
+        $image2 = Cookie::get('image2');
+        $image3 = Cookie::get('image3');
+        $p_image1 = Cookie::get('p_image1');
+        $p_image2 = Cookie::get('p_image2');
+        $p_image3 = Cookie::get('p_image3');
         return response()->view('table_of_contents.show_all',['user' => $user,
                                                               'partner_user' => $partner_user,
-                                                              'image1' => $random_image1,
-                                                              'image2' => $random_image2,
-                                                              'image3' => $random_image3,
-                                                              'p_image1' => $p_random_image1,
-                                                              'p_image2' => $p_random_image2,
-                                                              'p_image3' => $p_random_image3,
+                                                              'image1' => $image1,
+                                                              'image2' => $image2,
+                                                              'image3' => $image3,
+                                                              'p_image1' => $p_image1,
+                                                              'p_image2' => $p_image2,
+                                                              'p_image3' => $p_image3,
         ]);
         
         // $images = ['image1', 'image2', 'image3', 'p_image1', 'p_image2', 'p_image3'];
