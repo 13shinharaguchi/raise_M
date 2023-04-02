@@ -29,10 +29,10 @@ class Table_of_contentController extends Controller
         $random_image1 = $all_image1[array_rand($all_image1)];
         
         $all_image2 = [$image2, $p_image2];
-        $random_image2 = $all_image1[array_rand($all_image2)];
+        $random_image2 = $all_image2[array_rand($all_image2)];
         
         $all_image3 = [$image3, $p_image3];
-        $random_image3 = $all_image1[array_rand($all_image3)];
+        $random_image3 = $all_image3[array_rand($all_image3)];
         
         return response()->view('table_of_contents.index',['user' => $user,
                                                            'wanna_try' => $wanna_try,

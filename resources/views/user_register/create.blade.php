@@ -13,7 +13,8 @@
 </head>
 <body>
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
-    <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg" style="width: 700px;">
+    <!--レスポンシブに対応する時にはwidthをしていできなくなる-->
+    <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg max-w-md sm:max-w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         <h1 class="text-lg font-semibold">ニックネームをおしえてね</h1>
         <form action="{{ route('user_register.store') }}" method="POST" class="mt-4">
             @csrf
