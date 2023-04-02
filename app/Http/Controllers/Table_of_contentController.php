@@ -52,6 +52,10 @@ class Table_of_contentController extends Controller
         $p_image1 = Cookie::get('p_image1');
         $p_image2 = Cookie::get('p_image2');
         $p_image3 = Cookie::get('p_image3');
+        $question1 = Cookie::get('Q1');
+        $question2 = Cookie::get('Q2');
+        $question3 = Cookie::get('Q3');
+        
         return response()->view('table_of_contents.show_all',['user' => $user,
                                                               'partner_user' => $partner_user,
                                                               'image1' => $image1,
@@ -60,6 +64,9 @@ class Table_of_contentController extends Controller
                                                               'p_image1' => $p_image1,
                                                               'p_image2' => $p_image2,
                                                               'p_image3' => $p_image3,
+                                                              'question1' => $question1,
+                                                              'question2' => $question2,
+                                                              'question3' => $question3,
                                                               ]);
         
         // $images = ['image1', 'image2', 'image3', 'p_image1', 'p_image2', 'p_image3'];
