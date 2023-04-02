@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>raise</title>
 </head>
 <body>
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
-    <div class="p-6 max-w-md mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg">
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
+    <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg" style="width: 700px;">
         <h1 class="text-lg font-semibold">ニックネームをおしえてね</h1>
         <form action="{{ route('user_register.store') }}" method="POST" class="mt-4">
             @csrf
@@ -27,6 +26,7 @@
         </form>
     </div>
 </div>
+
 
 
 </body>
