@@ -12,18 +12,23 @@
     <title>raise</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
-        <h1>すべての結果を表示する</h1>
-        <p>{{$user}}</p>
-        <p>{{$partner_user}}</p>
-        <p>{{ $image1}}</p>
-        <p>{{ $image2}}</p>
-        <p>{{ $image3}}</p>
-        <p>{{ $p_image1}}</p>
-        <p>{{ $p_image2}}</p>
-        <p>{{ $p_image3}}</p>
-        <!--ボタンのようにみせる-->
-        <a href="{{ URL::previous() }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">戻る</a>
+    <div class="flex flex-col justify-center items-center h-screen">
+        <div>すべての結果を表示する</div>
+        <div class="h-screen">
+            <div class="">
+                <div>{{$user}}</div>
+                <div>{{ $image1}}</div>
+                <div>{{ $image2}}</div>
+                <div>{{ $image3}}</div>
+            </div>
+            <div class="">
+                <p>{{$partner_user}}</p>
+                <p>{{ $p_image1}}</p>
+                <p>{{ $p_image2}}</p>
+                <p>{{ $p_image3}}</p>
+            </div>
+        </div>
+        <div class="flex justify-center"><a href="{{ URL::previous() }}" class="bg-blue-500 hover:bg-blue-700 text-white">戻る</a></div>
     </div>
 </body>
 </html>

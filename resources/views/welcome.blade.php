@@ -12,10 +12,10 @@
     <title>raise</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" >
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-lime-300" >
         <form action="{{ route('user_register.create') }}" method="GET">
         <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">
-          {{ __('クリックして始める') }}
+          {{ __('始める') }}
         </button>
         </form>
     </div>

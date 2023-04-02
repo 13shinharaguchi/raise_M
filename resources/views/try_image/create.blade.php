@@ -15,16 +15,13 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <div>{{ $user}}</div>
         <div>やってみたいこと：{{$wanna_try}}</div>
-        <form action="{{ route('image.store') }}" method="POST">
+        <form action="{{ route('image.store') }}" method="POST" class="x-4 py-2 border-2 border-gray-400">
             @csrf
             <div>
-                <x-input-label for="image" :value="__('1つ目の質問')" />
                 <div>{{$question1}}</div>
                 <input name='image'  required autofocus></input>
             </div>
-            <x-primary-button>
-                {{ __('登録') }}
-            </x-primary-button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">登録する</button>
         </form>
     </div>
 </body>

@@ -18,13 +18,10 @@
             <form action="{{ route('image.subg3_store') }}" method="POST">
                 @csrf
             <div>
-                <x-input-label for="image" :value="__('3つ目の質問')" />
                 <div>{{$question3}}</div>
                 <input name='image' required autofocus ></input>
             </div>
-            <x-primary-button>
-                {{ __('相手に移動') }}
-            </x-primary-button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">パートナー登録へ</button>
         </form>
     </div>
 </body>

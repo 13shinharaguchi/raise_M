@@ -18,14 +18,14 @@
         <p>{{$user}}のやってみたいことは、{{$wanna_try}}　です</p>
         <p>あなたもなりきって答えみよう！</p>
         <div>
-            <form action="{{ route('partner_register_store') }}" method="POST">
+            <form action="{{ route('partner_register_store') }}" method="POST" class="x-4 py-2 border-2 border-gray-400">
                 @csrf
                 <div>
-                     <x-text-input name='partner_game_user' class="form-control" required autofocus />
+                     <input name='partner_game_user' class="form-control" required autofocus />
                 </div>
-                <x-primary-button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">
                  {{ __('登録する') }}
-                 </x-primary-button>
+                </button>
             </form>
         </div>
     </div>

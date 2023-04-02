@@ -14,14 +14,14 @@
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <p>{{$user}}のやってみたいことを登録する</p>
-        <form action="{{ route('wanna_try.store') }}" method="POST">
+        <form action="{{ route('wanna_try.store') }}" method="POST" class="x-4 py-2 border-2 border-gray-400">
             @csrf
             <div>
-                <x-text-input name='wanna_try' class="form-control" required autofocus />
+                <input name='wanna_try' class="form-control" required autofocus />
             </div>
-            <x-primary-button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">
                 {{ __('登録する') }}
-            </x-primary-button>
+            </button>
         </form>
     </div>
 </body>

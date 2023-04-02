@@ -14,9 +14,7 @@
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <form action="{{ route('content.index') }}" method="GET">
-            <x-primary-button>
-                {{ __('ランダムに目次を作成、一覧へ') }}
-            </x-primary-button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">ランダムに目次を作成、一覧へ</button>
         </form>
     </div>
 </body>

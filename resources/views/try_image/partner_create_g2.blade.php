@@ -17,13 +17,10 @@
         <form action="{{ route('partner_image.sub_store') }}" method="POST">
             @csrf
             <div>
-                <x-input-label for="image" :value="__('2つ目の質問')" />
                 <div>質問：{{$question2}}</div>
                 <input name='image' required autofocus></input>
             </div>
-            <x-primary-button>
-                {{ __('登録する') }}
-            </x-primary-button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">登録する</button>
         </form>
     </div>
 </body>
