@@ -7,27 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
     <title>raise</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
-        <h1>パートナー名の登録</h1> 
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
+        <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg" style="width: 700px;">
         <p>{{$user}}のやってみたいことは、{{$wanna_try}}　です</p>
         <p>あなたもなりきって答えみよう！</p>
-        <div>
-            <form action="{{ route('partner_register_store') }}" method="POST" class="x-4 py-2 border-2 border-gray-400">
-                @csrf
-                <div>
-                     <input name='partner_game_user' class="form-control" required autofocus />
-                </div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">
-                 {{ __('登録する') }}
-                </button>
-            </form>
-        </div>
+        <h1 class="text-lg font-semibold">まずは、ニックネームをおしえてね</h1>
+        <form action="{{ route('partner_register_store') }}" method="POST" >
+            @csrf
+            <div class="border-black border-2 rounded-md w-full">
+               
+                <input name='partner_game_user' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus></input>
+            </div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4">登録</button>
+        </form>
     </div>
 </body>
 </html>

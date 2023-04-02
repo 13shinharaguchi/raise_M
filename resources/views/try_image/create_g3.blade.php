@@ -24,7 +24,7 @@
                
                 <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus></input>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">パートナー登録へ</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4">パートナー登録へ</button>
         </form>
     </div>
 </body>
