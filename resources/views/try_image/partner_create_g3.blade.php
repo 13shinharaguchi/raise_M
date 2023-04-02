@@ -12,19 +12,17 @@
     <title>raise</title>
 </head>
 <body>
-    <div>{{ $user}}</div>
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div>{{ $user}}</div>
         <form action="{{ route('partner_image.subg3_store') }}" method="POST">
-        @csrf
-        <div>
-            <x-input-label for="image" :value="__('3つ目の質問')" />
-            <div>質問：{{$question3}}</div>
-            <input name='image' required autofocus></input>
-            <div style="display:none;">
+            @csrf
+            <div>
+                <!--<x-input-label for="image" :value="__()" />-->
+                <div>質問：{{$question3}}</div>
+                <input name='image' required autofocus></input>
             </div>
-        </div>
-        <x-primary-button>
-            {{ __('ランダム一覧の表示') }}
-        </x-primary-button>
-    </form>
+             <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">ランダム一覧の表示</button>
+        </form>
+    </div>
 </body>
 </html>

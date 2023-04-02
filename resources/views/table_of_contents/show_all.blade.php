@@ -12,14 +12,23 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>すべての結果を表示する</h1>
-    <p>{{$user}}</p>
-    <p>{{$partner_user}}</p>
-    <div>{{ $image1}}</div>
-    <div>{{ $image2}}</div>
-    <div>{{ $image3}}</div>
-    <div>{{ $p_image1}}</div>
-    <div>{{ $p_image2}}</div>
-    <div>{{ $p_image3}}</div>
+    <div class="flex flex-col justify-center items-center h-screen">
+        <div>すべての結果を表示する</div>
+        <div class="h-screen">
+            <div class="">
+                <div>{{$user}}</div>
+                <div>{{ $image1}}</div>
+                <div>{{ $image2}}</div>
+                <div>{{ $image3}}</div>
+            </div>
+            <div class="">
+                <p>{{$partner_user}}</p>
+                <p>{{ $p_image1}}</p>
+                <p>{{ $p_image2}}</p>
+                <p>{{ $p_image3}}</p>
+            </div>
+        </div>
+        <div class="flex justify-center"><a href="{{ URL::previous() }}" class="bg-blue-500 hover:bg-blue-700 text-white">戻る</a></div>
+    </div>
 </body>
 </html>

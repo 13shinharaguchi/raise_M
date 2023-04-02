@@ -12,15 +12,14 @@
     <title>raise</title>
 </head>
 <body>
-    <h1>ここにランダム結果を表示する</h1>
-    <div>{{$wanna_try}}に対するイメージだ！</div>
-    <p>{{$random_image1}}</p>
-    <p>{{$random_image2}}</p>
-    <p>{{$random_image3}}</p>
-    <form action="{{ route('content.all') }}" method="GET">
-        <x-primary-button class="ml-3">
-            {{ __('すべて表示へ') }}
-        </x-primary-button>
-    </form>
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <p>{{$wanna_try}}に対するイメージだ！</p>
+        <p>{{$random_image1}}</p>
+        <p>{{$random_image2}}</p>
+        <p>{{$random_image3}}</p>
+        <form action="{{ route('content.all') }}" method="GET">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">すべて表示へ</button>
+        </form>
+    </div>
 </body>
 </html>
