@@ -14,10 +14,10 @@
 <body>
 <div class="min-h-screen flex flex-col justify-center items-center bg-green-100">
   <form action="{{ route('user_register.create') }}" method="GET">
-    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mb-10">始める</button>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mb-10 rounded-full">始める</button>
   </form>
   <div class="flex justify-center">
-    <a href="{{ route('how_to_use') }}" class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">使い方</a>
+    <a href="{{ route('how_to_use') }}" class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded-full">使い方</a>
   </div>
 </div>
 

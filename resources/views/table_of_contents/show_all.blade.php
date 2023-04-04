@@ -68,7 +68,7 @@
     </div>
 
     <div class="flex justify-center w-full">
-      <a href="{{ URL::previous() }}" class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2">戻る</a>
+      <a href="{{ URL::previous() }}" class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full">戻る</a>
     </div>
   </div>
 </div>

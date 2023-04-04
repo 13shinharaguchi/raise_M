@@ -23,7 +23,7 @@
             <div class="border-black border-2 rounded-md w-full">
                 <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full">登録する</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full rounded-full">登録する</button>
         </form>
     </div>
 </div>
