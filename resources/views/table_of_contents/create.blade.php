@@ -13,10 +13,12 @@
     <title>raise</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
-        <form action="{{ route('content.index') }}" method="GET">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">目次を作成</button>
-        </form>
-    </div>
+<div class="min-h-screen flex flex-col justify-center items-center bg-green-100">
+  <form action="{{ route('content.index') }}" method="GET">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded-full">目次を作成</button>
+  </form>
+</div>
+
+
 </body>
 </html>

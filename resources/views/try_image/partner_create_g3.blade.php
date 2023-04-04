@@ -13,16 +13,15 @@
 </head>
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
-        <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg" style="width: 700px;">
-        <p>{{$user}}　以下の質問に答えて～</p>
-        <div>{{$question3}}</div>
-        <form action="{{ route('partner_image.subg3_store') }}" method="POST" >
+    <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg w-full sm:w-2/3 lg:w-1/2">
+        <p class="text-center">{{$user}} 以下の質問に答えてね</p>
+        <div class="text-center pt-6">{{$question3}}</div>
+        <form action="{{ route('partner_image.subg3_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
-               
-                <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus></input>
+                <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4">登録</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full rounded-full">登録する</button>
         </form>
     </div>
 </body>

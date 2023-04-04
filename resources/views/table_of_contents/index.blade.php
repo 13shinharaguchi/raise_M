@@ -18,7 +18,7 @@
         <p>{{$random_image2}}</p>
         <p>{{$random_image3}}</p>
         <form action="{{ route('content.all') }}" method="GET">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1">すべて表示へ</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded-full">すべて表示へ</button>
         </form>
     </div>
 </body>
