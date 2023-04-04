@@ -15,18 +15,21 @@
 </head>
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
-        <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg" style="width: 700px;">
-        <p>{{$user}}のやってみたいことは、{{$wanna_try}}　です</p>
+    <!--レスポンシブに対応する時にはwidthをしていできなくなる-->
+    <div class="p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg max-w-md sm:max-w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
+        <p>{{$user}}のやってみたいことは、{{$wanna_try}}です</p>
         <p>あなたもなりきって答えみよう！</p>
-        <h1 class="text-lg font-semibold">まずは、ニックネームをおしえてね</h1>
-        <form action="{{ route('partner_register_store') }}" method="POST" >
+        <h1 class="text-lg font-semibold">ニックネームをおしえてね</h1>
+        <form action="{{ route('partner_register_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
-               
-                <input name='partner_game_user' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus></input>
+                <input name="partner_game_user" class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4">登録</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4">
+                {{ __('登録する') }}
+            </button>
         </form>
     </div>
+</div>
 </body>
 </html>
