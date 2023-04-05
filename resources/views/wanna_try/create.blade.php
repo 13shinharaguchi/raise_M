@@ -12,7 +12,7 @@
     <title>raise</title>
 </head>
 <body>
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-12 sm:pt-0 bg-green-100">
     <div class="p-12 w-11/12 sm:w-full bg-white shadow-md overflow-hidden sm:rounded-lg sm:mx-auto">
         <h1>{{ $user }}のやってみたいことを登録しよう</h1>
         <form action="{{ route('wanna_try.store') }}" method="POST" class="mt-4">
