@@ -11,13 +11,6 @@ class Table_of_contentController extends Controller
 {
     public function create ()
     {
-        return response()->view('table_of_contents.create');
-    }
-    
-    public function index ()
-    {
-        $user = Cookie::get('game_user');
-        $wanna_try = Cookie::get('wanna_try');
         $image1 = Cookie::get('image1');
         $image2 = Cookie::get('image2');
         $image3 = Cookie::get('image3');
@@ -34,6 +27,19 @@ class Table_of_contentController extends Controller
         $all_image3 = [$image3, $p_image3];
         $random_image3 = $all_image3[array_rand($all_image3)];
         
+        Cookie::queue('random_image1', $random_image1);
+        Cookie::queue('random_image2', $random_image2);
+        Cookie::queue('random_image3', $random_image3);
+        return response()->view('table_of_contents.create');
+    }
+    
+    public function index ()
+    {
+        $user = Cookie::get('game_user');
+        $wanna_try = Cookie::get('wanna_try');
+        $random_image1 = Cookie::get('random_image1');
+        $random_image2 = Cookie::get('random_image2');
+        $random_image3 = Cookie::get('random_image3');
         return response()->view('table_of_contents.index',['user' => $user,
                                                            'wanna_try' => $wanna_try,
                                                            'random_image1' => $random_image1,
