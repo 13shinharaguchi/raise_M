@@ -12,8 +12,10 @@
     <title>raise</title>
 </head>
 <body>
+<div class="min-h-screen flex flex-col justify-center items-center bg-green-100">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
-        <p>{{$wanna_try}}に対するイメージだ！</p>
+        <p>{{$wanna_try}}に対して思っていることです</p>
+        <p>お互いに話し、深ぼってみよう！</p>
         <p>{{$random_image1}}</p>
         <p>{{$random_image2}}</p>
         <p>{{$random_image3}}</p>
@@ -21,5 +23,6 @@
             <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded-full">すべて表示へ</button>
         </form>
     </div>
+</div>
 </body>
 </html>

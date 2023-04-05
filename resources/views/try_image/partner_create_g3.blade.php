@@ -12,10 +12,12 @@
     <title>raise</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-green-100">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-12 sm:pt-0 bg-green-100">
     <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg w-full sm:w-2/3 lg:w-1/2">
-        <p class="text-center">{{$user}} 以下の質問に答えてね</p>
-        <div class="text-center pt-6">{{$question3}}</div>
+        <p class="text-center">{{$user}}</p>
+        <div class="text-center">{{$wanna_try}}</div>
+        <div class="text-center">に対して</div>
+        <div class="text-center">{{$question3}}</div>
         <form action="{{ route('partner_image.subg3_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
