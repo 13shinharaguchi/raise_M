@@ -14,7 +14,8 @@
 <body>
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-12 sm:pt-0 bg-green-100">
     <div class="p-12 w-11/12 sm:w-full bg-white shadow-md overflow-hidden sm:rounded-lg sm:mx-auto">
-        <h1>{{ $user }}のやってみたいことを登録しよう</h1>
+        <p class="text-xl">{{ $user }}</p>
+        <div>のやってみたいことを登録しよう</div>
         <form action="{{ route('wanna_try.store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
