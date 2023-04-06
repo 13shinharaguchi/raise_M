@@ -13,20 +13,21 @@
 </head>
 <body>
     <div class="min-h-screen flex flex-col justify-center items-center bg-green-100">
-        <div>
+        <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden  ">
             <h1>
-                やってみたいことを入力しよう！！
+                ３つの質問に答えてみよう！
             </h1>
-            <p>
-               やってみたいことに対して、３つの質問に答えてみよう！
-               回答するときは、考えすぎないようにして
-               今思っていることを回答してね！
-            </p>
+            <div>
+                <p> やってみたいことに対して、３つの質問に答えてみよう！</p>
+                <p>今思いついたことを回答しよう！</p>
+                <p>考えすぎないようにしてね</p>
+            </div>
         </div>
         <div class="flex justify-center">
-            <a href="{{ URL::previous() }}" class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2">戻る</a>
+            <a href="{{ URL::previous() }}" class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full">戻る</a>
         </div>
     </div>
+</div>
 
 </body>
 </html>
