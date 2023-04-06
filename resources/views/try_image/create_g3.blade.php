@@ -17,7 +17,7 @@
     <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg w-full sm:w-2/3 lg:w-1/2">
         <div class="text-center">{{$wanna_try}}</div>
         <div class="text-center">に対して</div>
-        <div class="text-center">{{$question3}}</div>
+        <div class="text-center font-bold text-xl">{{$question3}}</div>
         <form action="{{ route('image.subg3_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
