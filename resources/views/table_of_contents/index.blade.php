@@ -15,7 +15,7 @@
 <div class="min-h-screen bg-green-100">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h2 class="text-2xl font-bold text-gray-800 mb-8">{{$wanna_try}}</h2>
-    <div class="text-2xl font-bold text-gray-800 mb-8 text-center">について以下の回答から深ぼってみよう</div>
+    <div class="text-2xl font-bold text-gray-800 mb-8 text-center">について以下から話して深ぼってみよう</div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div class="bg-white rounded-lg shadow-md p-4">
         <p>{{$random_image1}}</p>
@@ -27,8 +27,9 @@
         <p>{{$random_image3}}</p>
       </div>
     </div>
-    <form action="{{ route('content.all') }}" method="GET" class="mt-8 text-center">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full">すべて表示へ</button>
+    <div class="text-center text-xl pt-20">話に困ったら以下をクリック</div>
+    <form action="{{ route('content.all') }}" method="GET" class=" text-center">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full">質問と回答を表示</button>
     </form>
   </div>
 </div>
