@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
             'updated_at' => $now,
         ],
         [
-            'question' => '周りの人々はどのように反応していますか？',
+            'question' => '周りの人に熱く語れるところはどこですか？',
             'kind_number' => 3,
             'created_at' => $now,
             'updated_at' => $now,
