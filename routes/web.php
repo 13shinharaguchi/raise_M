@@ -32,6 +32,7 @@ Route::post('/try_image/sub_store', [Try_imageController::class, 'sub_store'])->
 Route::get('/try_image/subg3_create', [Try_imageController::class, 'subg3_create'])->name('image.subg3_create');
 Route::post('/try_image/subg3_store', [Try_imageController::class, 'subg3_store'])->name('image.subg3_store');
 
+
 //二人目のtry_image
 Route::get('/partner_try_image', [Partner_try_imageController::class, 'partner_create'])->name('partner_image.create');
 Route::post('/partner_try_image/store', [Partner_try_imageController::class, 'partner_store'])->name('partner_image.store');
@@ -52,6 +53,10 @@ Route::get('/', function () {
 Route::get('/how_to_use', function () {
     return view('how_to_use');
 })->name('how_to_use');
+
+Route::get('/user_change', function () {
+    return view('user_change');
+})->name('user_change');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
