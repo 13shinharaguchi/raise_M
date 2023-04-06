@@ -17,13 +17,13 @@
     <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden sm:rounded-lg w-full sm:w-2/3 lg:w-1/2">
         <div class="text-center">{{$wanna_try}}</div>
         <div class="text-center">に対して</div>
-        <div class="text-center font-bold text-xl">{{$question3}}</div>
+        <div class="text-center font-bold text-xl py-8">{{$question3}}</div>
         <form action="{{ route('image.subg3_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
                 <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full rounded-full">パートナー登録へ</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full rounded-full">登録する</button>
         </form>
     </div>
 </div>

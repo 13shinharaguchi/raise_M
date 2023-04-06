@@ -64,7 +64,8 @@ class Try_imageController extends Controller
         {
             $image3 = $request->input('image');
             Cookie::queue('image3', $image3);
-            return redirect()->route('partner_register');
+            return redirect()->route('user_change');
+            // return redirect()->route('partner_register');
         }
     
 }
