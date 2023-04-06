@@ -15,7 +15,7 @@
 <div class="min-h-screen bg-green-100">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h2 class="text-2xl font-bold text-gray-800 mb-8">{{$wanna_try}}</h2>
-    <div class="text-2xl font-bold text-gray-800 mb-8 text-center">について以下の回答から話してみよう</div>
+    <div class="text-2xl font-bold text-gray-800 mb-8 text-center">について以下の回答から深ぼって</div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div class="bg-white rounded-lg shadow-md p-4">
         <p>{{$random_image1}}</p>

@@ -13,14 +13,11 @@
 </head>
 <body>
     <div class="min-h-screen flex flex-col justify-center items-center bg-green-100">
-        <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden  ">
-            <h1>
-                ３つの質問に答えてみよう！
-            </h1>
+        <div class="p-4 sm:p-12 mx-auto bg-white shadow-md overflow-hidden mb-8">
             <div>
                 <p> やってみたいことに対して、３つの質問に答えてみよう！</p>
                 <p>今思いついたことを回答しよう！</p>
-                <p>考えすぎないようにしてね</p>
+                <p>考えすぎないようにしてね!</p>
             </div>
         </div>
         <div class="flex justify-center">
