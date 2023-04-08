@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Scripts -->
-    <title>raise</title>
+    <title>ひだね</title>
 </head>
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-12 sm:pt-0 bg-purple-100">
@@ -20,7 +20,8 @@
         <form action="{{ route('partner_image.subg3_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
-                <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus>
+                <input name='image' class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="50文字以内" maxlength="50"required autofocus>
             </div>
             <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full rounded-full">登録する</button>
         </form>

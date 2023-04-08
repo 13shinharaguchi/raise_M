@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     
-    <title>raise</title>
+    <title>ひだね</title>
 </head>
 <body>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-12 sm:pt-0 bg-purple-100">
@@ -23,7 +23,8 @@
         <form action="{{ route('partner_register_store') }}" method="POST" class="mt-4">
             @csrf
             <div class="border-black border-2 rounded-md w-full">
-                <input name="partner_game_user" class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" required autofocus>
+                <input name="partner_game_user" class="w-full py-2 px-3 border-none focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 placeholder="10文字以内" maxlength="10"required autofocus>
             </div>
             <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mt-4 w-full rounded-full">
                 {{ __('登録する') }}
