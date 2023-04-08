@@ -33,6 +33,7 @@
     </form>
     <div class="text-center mt-8">
       <button class="bg-red-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full" onclick="window.close();return false;">閉じる</button>
+      <a href="#" class="block w-full text-center py-2 bg-red-500 hover:bg-blue-700 text-white rounded-md" onclick="window.close();return false;">閉じる</a>
     </div>
   </div>
 </div>
