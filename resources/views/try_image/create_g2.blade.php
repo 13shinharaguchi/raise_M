@@ -8,7 +8,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
-    <title>raise</title>
+    <title>ひだね</title>
 </head>
 <body>
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-12 sm:pt-0 bg-green-100">

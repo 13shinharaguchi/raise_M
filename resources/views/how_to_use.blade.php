@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
 
-    <title>raise</title>
+    <title>ひだね</title>
 </head>
 <body>
 <div class="min-h-screen flex flex-col justify-center items-center bg-green-100">
