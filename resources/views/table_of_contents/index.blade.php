@@ -27,10 +27,13 @@
         <p>{{$random_image3}}</p>
       </div>
     </div>
-    <div class="text-center text-xl pt-20">話に困ったら以下をクリック</div>
+    <div class="text-center text-xl pt-20 ">話に困ったら以下をクリック</div>
     <form action="{{ route('content.all') }}" method="GET" class=" text-center">
       <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full">質問と回答を表示</button>
     </form>
+    <div class="text-center mt-8">
+      <button class="bg-red-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full" onclick="window.close();return false;">閉じる</button>
+    </div>
   </div>
 </div>
 
