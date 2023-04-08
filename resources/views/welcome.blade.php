@@ -17,7 +17,7 @@
     <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mb-10 rounded-full">始める</button>
   </form>
   <div class="flex justify-center">
-    <a href="{{ route('how_to_use') }}" class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded-full">使い方</a>
+    <a href="{{ route('how_to_use') }}" class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded-full">遊び</a>
   </div>
 </div>
 
